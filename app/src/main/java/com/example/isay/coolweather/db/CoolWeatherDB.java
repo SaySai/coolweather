@@ -17,6 +17,7 @@ import java.util.List;
  */
 public class CoolWeatherDB {
 
+
     /**
      * 数据库名
      */

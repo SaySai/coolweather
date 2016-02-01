@@ -1,11 +1,21 @@
 package com.example.isay.coolweather.util;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
 
 import com.example.isay.coolweather.db.CoolWeatherDB;
 import com.example.isay.coolweather.model.City;
 import com.example.isay.coolweather.model.County;
 import com.example.isay.coolweather.model.Province;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by isay on 1/31/2016.
@@ -83,7 +93,7 @@ public class Utility {
     /**
      * 解析服务器返回的JSON数据，并将解析出的数据存储到本地。
      */
-/*    public static void handleWeatherResponse(Context context, String response) {
+    public static void handleWeatherResponse(Context context, String response) {
         try {
             JSONObject jsonObject = new JSONObject(response);
             JSONObject weatherInfo = jsonObject.getJSONObject("weatherinfo");
@@ -100,9 +110,9 @@ public class Utility {
         }
     }
 
-    *//**
+    /**
      * 将服务器返回的所有天气信息存储到SharedPreferences文件中。
-     *//*
+     */
     public static void saveWeatherInfo(Context context, String cityName,
                                        String weatherCode, String temp1, String temp2, String weatherDesp,
                                        String publishTime) {
@@ -118,5 +128,5 @@ public class Utility {
         editor.putString("publish_time", publishTime);
         editor.putString("current_date", sdf.format(new Date()));
         editor.commit();
-    }*/
+    }
 }

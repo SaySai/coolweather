@@ -22,6 +22,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="com.example.isay.coolweather.activity.WeatherActivity"></activity>
+
 
     </application>
 
